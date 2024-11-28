@@ -53,11 +53,12 @@ unsigned int single_paradox(T &r)
 int main(int argc, char *argv[])
 {
     constexpr unsigned int magic_parameter=1000;
+    constexpr unsigned int mindays=10;
     constexpr unsigned int maxdays=magic_parameter;
     constexpr unsigned int maxparadoxes=magic_parameter;
     map<unsigned int,map<unsigned int,unsigned int>> z;
     //z[collision][days]=number of occurrence;
-    for(unsigned int days=10;days<maxdays;++days)
+    for(unsigned int days=mindays;days<maxdays;++days)
     {
         //if(99==days%100) cout<<"//days="<<days<<endl;
         lott_single rng(days);
